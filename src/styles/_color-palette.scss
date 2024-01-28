@@ -1,0 +1,12 @@
+@import "./variables";
+
+$themes: (
+  light: (
+    buttonColor: $indigo-500,
+    buttonTextColor: $white,
+  ),
+  dark: (
+    buttonColor: $indigo-700,
+    buttonTextColor: $white,
+  ),
+);

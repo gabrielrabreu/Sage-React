@@ -25,7 +25,11 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      postcss(),
+      postcss({
+        modules: {
+          generateScopedName: "[name]__[local]__[hash:base64:5]",
+        },
+      }),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),

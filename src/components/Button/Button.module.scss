@@ -1,0 +1,8 @@
+@import "../../styles";
+
+.button {
+  @include themify() {
+    color: themed("buttonTextColor");
+    background: themed("buttonColor");
+  }
+}
