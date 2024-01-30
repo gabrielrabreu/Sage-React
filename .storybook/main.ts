@@ -5,9 +5,10 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    "@storybook/addon-actions",
     "@storybook/addon-themes",
+    "@storybook/addon-a11y",
     {
       name: "@storybook/addon-styling-webpack",
       options: {

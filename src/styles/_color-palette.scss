@@ -4,9 +4,19 @@ $themes: (
   light: (
     buttonColor: $indigo-500,
     buttonTextColor: $white,
+    buttonHoverColor: $indigo-600,
+    buttonDisabledColor: $indigo-300,
+    buttonRingColor: $indigo-400,
+    buttonRingOffsetColor: $white,
+    buttonShadowColor: $indigo-300,
   ),
   dark: (
-    buttonColor: $indigo-700,
+    buttonColor: $indigo-500,
     buttonTextColor: $white,
+    buttonHoverColor: $indigo-600,
+    buttonDisabledColor: $indigo-300,
+    buttonRingColor: $indigo-400,
+    buttonRingOffsetColor: $gray-800,
+    buttonShadowColor: $gray-900,
   ),
 );

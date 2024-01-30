@@ -1,8 +1,47 @@
 @import "../../styles";
 
 .button {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+
   @include themify() {
+    background-color: themed("buttonColor");
     color: themed("buttonTextColor");
-    background: themed("buttonColor");
+    box-shadow: 0 10px 15px -3px themed("buttonShadowColor"),
+      0 4px 6px -2px themed("buttonShadowColor");
+  }
+
+  @include transition-colors();
+
+  &:hover {
+    @include themify() {
+      background-color: themed("buttonHoverColor");
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+
+    @include themify() {
+      background-color: themed("buttonDisabledColor");
+    }
+  }
+
+  &:focus {
+    @include themify() {
+      box-shadow: 0 0 0 1px themed("buttonRingOffsetColor"),
+        0 0 0 3px themed("buttonRingOffsetColor"),
+        0 0 0 5px themed("buttonRingColor");
+    }
   }
 }
