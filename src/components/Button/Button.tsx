@@ -26,7 +26,7 @@ export interface ButtonProps {
 /**
  * Button component used for user interactions.
  * @param {ButtonProps} props - The component props.
- * @returns {JSX.Element} A JSX element representing the button.
+ * @returns {React.FC<ButtonProps>} A functional component representing the button.
  */
 const Button: React.FC<ButtonProps> = (props) => {
   return (
