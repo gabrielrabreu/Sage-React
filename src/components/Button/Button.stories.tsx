@@ -26,9 +26,9 @@ export const Default: Story = {
   },
 };
 
-export const WithDisabled: Story = {
+export const Disabled: Story = {
   args: {
-    label: "With Disabled",
+    label: "Disabled",
     disabled: true,
   },
 };

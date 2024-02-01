@@ -9,6 +9,13 @@ $themes: (
     buttonRingColor: $indigo-400,
     buttonRingOffsetColor: $white,
     buttonShadowColor: $indigo-300,
+    toggleSwitchColor: $gray-400,
+    toggleSwitchHoverColor: $gray-500,
+    toggleSwitchCheckedColor: $indigo-500,
+    toggleSwitchCheckedHoverColor: $indigo-600,
+    toggleSwitchTextColor: $white,
+    toggleSwitchDisabledColor: $gray-200,
+    toggleSwitchCheckedDisabledColor: $indigo-300,
   ),
   dark: (
     buttonColor: $indigo-500,
@@ -18,5 +25,9 @@ $themes: (
     buttonRingColor: $indigo-400,
     buttonRingOffsetColor: $gray-800,
     buttonShadowColor: $gray-900,
+    toggleSwitchColor: $white,
+    toggleSwitchHoverColor: $gray-400,
+    toggleSwitchCheckedColor: $indigo-500,
+    toggleSwitchCheckedHoverColor: $indigo-600,
   ),
 );

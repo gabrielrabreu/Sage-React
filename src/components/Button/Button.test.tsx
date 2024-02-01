@@ -2,38 +2,41 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { composeStory } from "@storybook/react";
 
-import meta, { Default, WithDisabled } from "./Button.stories";
+import meta, { Default, Disabled } from "./Button.stories";
 
 const ButtonDefault = composeStory(Default, meta);
-const ButtonWithDisabled = composeStory(WithDisabled, meta);
+const ButtonDisabled = composeStory(Disabled, meta);
 
 describe("Button component", () => {
   test("renders button with label correctly", () => {
-    const { getByText } = render(ButtonDefault());
+    const { getByTestId } = render(ButtonDefault());
 
-    expect(getByText("Default")).toBeInTheDocument();
+    const button = getByTestId("button");
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent("Default");
   });
 
   test("calls onClick callback when button is clicked", () => {
     const onClickMock = jest.fn();
 
-    const { getByText } = render(ButtonDefault({ onClick: onClickMock }));
+    const { getByTestId } = render(ButtonDefault({ onClick: onClickMock }));
 
-    fireEvent.click(getByText("Default"));
+    const button = getByTestId("button");
+    fireEvent.click(button);
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 
   test("disables button when disabled prop is true", () => {
-    const { getByText } = render(ButtonWithDisabled());
+    const { getByTestId } = render(ButtonDisabled());
 
-    const button = getByText("With Disabled");
+    const button = getByTestId("button");
     expect(button).toBeDisabled();
   });
 
   test("button is enabled by default", () => {
-    const { getByText } = render(ButtonDefault());
+    const { getByTestId } = render(ButtonDefault());
 
-    const button = getByText("Default");
+    const button = getByTestId("button");
     expect(button).toBeEnabled();
   });
 });

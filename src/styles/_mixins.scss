@@ -29,3 +29,10 @@
   transition-duration: $duration;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@mixin transition($duration: 200ms) {
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+    transition-duration: $duration;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
