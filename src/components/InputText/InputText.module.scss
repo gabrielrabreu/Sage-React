@@ -1,0 +1,24 @@
+@import "../../styles";
+
+/* Input Text */
+
+.inputText {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  @include themify() {
+    outline: 1px solid themed("inputOutlineColor");
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    @include themify() {
+      outline: 2px solid themed("inputOutlineFocusColor");
+    }
+  }
+}

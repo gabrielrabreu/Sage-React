@@ -18,15 +18,15 @@ export interface ToggleSwitchProps {
   disabled?: boolean;
 
   /**
-   * Callback function called when the switch is toggled.
+   * Callback function triggered when the switch is toggled.
    */
   onChange?: () => void;
 }
 
 /**
  * ToggleSwitch Component: A toggle switch.
- * @param {ToggleSwitchProps} props - The component props.
- * @returns {React.FC<ToggleSwitchProps>} - A JSX element representing the toggle switch component.
+ * @param {ToggleSwitchProps} props - Component props.
+ * @returns {React.FC<ToggleSwitchProps>} - A JSX element representing the toggle switch.
  */
 const ToggleSwitch: React.FC<ToggleSwitchProps> = (props) => {
   return (

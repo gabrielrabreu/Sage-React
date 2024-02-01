@@ -7,7 +7,7 @@ import styles from "./Button.module.scss";
  */
 export interface ButtonProps {
   /**
-   * The label of the button.
+   * Label of the button.
    */
   label: string;
 
@@ -18,14 +18,14 @@ export interface ButtonProps {
   disabled?: boolean;
 
   /**
-   * The callback function to be called when the button is clicked.
+   * Callback function triggered when the button is clicked.
    */
   onClick?: () => void;
 }
 
 /**
- * Button Component: A button.
- * @param {ButtonProps} props - The component props.
+ * Button Component: A basic button.
+ * @param {ButtonProps} props - Component props.
  * @returns {React.FC<ButtonProps>} - A JSX element representing the button.
  */
 const Button: React.FC<ButtonProps> = (props) => {
