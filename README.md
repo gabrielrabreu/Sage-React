@@ -1,6 +1,6 @@
 # SAGE REACT
 
-SAGE Design System is a collection of reusable UI components built with React and TypeScript, aimed at providing a consistent and efficient way to develop user interfaces across projects.
+SAGE is a collection of reusable UI components built with React and TypeScript, aimed at providing a consistent and efficient way to develop user interfaces across projects.
 
 ## Table of Contents
 
@@ -19,16 +19,16 @@ SAGE Design System is a collection of reusable UI components built with React an
 
 ## Usage
 
-To use SAGE Design System in your project, simply install the package from npm:
+To use SAGE in your project, simply install the package from npm:
 
 ```bash
-npm install @gabrielrabreu/sage-react-ui
+npm install @gabrielrabreu/sage-react
 ```
 
 Then, import the desired components into your project and start using them:
 
 ```
-import { Button, InputText, ToggleSwitch } from '@gabrielrabreu/sage-react-ui';
+import { Button, InputText, ToggleSwitch } from '@gabrielrabreu/sage-react';
 
 function App() {
   return (
