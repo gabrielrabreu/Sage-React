@@ -1,4 +1,4 @@
-# SAGE REACT UI
+# SAGE REACT
 
 SAGE Design System is a collection of reusable UI components built with React and TypeScript, aimed at providing a consistent and efficient way to develop user interfaces across projects.
 
