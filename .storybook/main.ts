@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-actions",
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
+    "storybook-addon-react-router-v6",
     {
       name: "@storybook/addon-styling-webpack",
       options: {
