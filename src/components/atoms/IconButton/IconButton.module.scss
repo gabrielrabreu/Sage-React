@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.iconButton {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $gray-200;
+  }
+
+  &:active {
+    background-color: $gray-300;
+  }
+
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px $gray-400;
+  }
+
+  svg {
+    color: $gray-700;
+  }
+}

@@ -1,6 +1,6 @@
 @import "reset";
 @import "variables";
 
-body {
-  font-family: $font-family;
+* {
+  font-family: $font-family !important;
 }
