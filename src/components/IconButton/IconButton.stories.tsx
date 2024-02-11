@@ -5,7 +5,7 @@ import IconButton from "./IconButton";
 import Icon from "../Icon/Icon";
 
 const meta: Meta<typeof IconButton> = {
-  title: "Atoms/IconButton",
+  title: "Sage/IconButton",
   component: IconButton,
   parameters: {
     layout: "centered",

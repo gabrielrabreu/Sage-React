@@ -1,3 +1,4 @@
-export * from "./atoms";
-export * from "./molecules";
-export * from "./organisms";
+export * from "./Button";
+export * from "./Icon";
+export * from "./IconButton";
+export * from "./Typography";

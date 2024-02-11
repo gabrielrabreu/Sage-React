@@ -1,30 +1,29 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import Button from "./Button";
+import Icon from "./Icon";
 
-const meta: Meta<typeof Button> = {
-  title: "Atoms/Button",
-  component: Button,
+const meta: Meta<typeof Icon> = {
+  title: "Sage/Icon",
+  component: Icon,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    text: {
+    name: {
       control: {
-        type: "text",
+        type: "select",
       },
     },
-    onClick: { action: "onClick" },
   },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Icon>;
 
 export const Example: Story = {
   args: {
-    text: "Click me",
+    name: "Home",
   },
 };
