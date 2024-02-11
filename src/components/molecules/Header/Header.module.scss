@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  height: 3.5rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 997;
+  min-width: 100vh;
+  padding-left: 1rem;
+  background-color: $white;
+  box-shadow: 0px 2px 20px $gray-300;
+
+  nav {
+    margin-left: auto;
+
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ describe("IconButton", () => {
   it("renders correctly", () => {
     const { getByTestId } = render(<IconButton icon={<Icon name="Bell" />} />);
     const buttonElement = getByTestId("icon-button");
-    const iconElement = getByTestId("icon");
+    const iconElement = getByTestId("icon-Bell");
     expect(buttonElement).toBeInTheDocument();
     expect(iconElement).toBeInTheDocument();
   });

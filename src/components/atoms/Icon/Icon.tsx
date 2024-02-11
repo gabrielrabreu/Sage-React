@@ -20,7 +20,7 @@ interface IconProps {
  */
 const Icon: React.FC<IconProps> = ({ name }) => {
   const LucideIcon = LucideIcons[name];
-  return <LucideIcon className={styles.icon} data-testid="icon" />;
+  return <LucideIcon className={styles.icon} data-testid={`icon-${name}`} />;
 };
 
 export default Icon;

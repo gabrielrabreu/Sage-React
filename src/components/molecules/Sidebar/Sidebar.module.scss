@@ -1,0 +1,52 @@
+@import "../../../styles/variables";
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 996;
+  padding: 1rem;
+  overflow-y: auto;
+  width: 200px;
+  background-color: $white;
+  box-shadow: 0px 0px 20px $gray-300;
+  transition: all 0.3s ease;
+
+  ul {
+    .heading {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $gray-400;
+      margin: 10px 0 5px 15px;
+    }
+
+    .item {
+      margin-bottom: 5px;
+
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: $gray-800;
+        text-decoration: none;
+
+        svg {
+          color: $gray-400;
+          width: 1rem;
+          height: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .active {
+        background: #f6f9ff;
+        color: $indigo-500;
+      }
+    }
+  }
+}
