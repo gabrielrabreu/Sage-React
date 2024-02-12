@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+.aside {
+  position: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 996;
+  box-shadow: 10px 0 10px -10px $gray-300;
+  transition: left 0.3s ease;
+}
+
+.asideNav {
+  padding: 1rem;
+}
+
+.asideNavItem {
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: $gray-700;
+
+    svg {
+      width: 1rem;
+      margin-right: 0.5rem;
+      color: $gray-700;
+    }
+  }
+
+  .asideNavItemActive {
+    background-color: $gray-300;
+  }
+
+  &:hover {
+    background-color: $gray-200;
+  }
+
+  &:active {
+    background-color: $gray-300;
+  }
+}
+
+.asideStorybook {
+  width: 200px;
+  background-color: #f6f9ff;
+}
+
+.asideStorybookHidden {
+  left: -200px;
+}

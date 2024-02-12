@@ -1,5 +1,9 @@
-export { default as Breadcrumb } from "./Breadcrumb";
-export { default as Button } from "./Button";
-export { default as InputNumber } from "./InputNumber";
-export { default as InputText } from "./InputText";
-export { default as ToggleSwitch } from "./ToggleSwitch";
+export * from "./Aside";
+export * from "./Breadcrumb";
+export * from "./Button";
+export * from "./Footer";
+export * from "./Header";
+export * from "./HeroSection";
+export * from "./Icon";
+export * from "./IconButton";
+export * from "./Typography";

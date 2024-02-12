@@ -1,32 +1,34 @@
-$color: #899bbd;
-$activeColor: #51678f;
+@import "../../styles/variables";
 
 .breadcrumb {
-  margin-top: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  color: $color;
+  font-size: 1rem;
+  color: $gray-400;
+}
 
-  .item {
-    display: inline;
+.breadcrumbItem {
+  display: inline;
 
-    &:not(:last-child):after {
-      content: " \002F ";
-      margin-right: 2px;
-    }
+  &:not(:last-child):after {
+    content: " \002F ";
+    margin-right: 0.2rem;
+  }
 
-    a {
-      text-decoration: none;
-      color: $color;
+  a {
+    text-decoration: none;
+    color: $gray-400;
+    transition: color 0.3s ease;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    .active {
-      font-weight: 600;
-      color: $activeColor;
+    &:hover {
+      color: $gray-500;
     }
   }
+
+  .active {
+    color: $gray-600;
+    font-weight: 600;
+  }
+}
+
+.storybook {
+  background-color: #f6f9ff;
 }

@@ -1,26 +1,33 @@
 import { Meta, StoryObj } from "@storybook/react";
 
 import { withRouter } from "../../utils";
-import Breadcrumb from "./Breadcrumb";
+import HeroSection from "./HeroSection";
 
-const meta: Meta<typeof Breadcrumb> = {
-  title: "Sage/Breadcrumb",
-  component: Breadcrumb,
+const meta: Meta<typeof HeroSection> = {
+  title: "Sage/HeroSection",
+  component: HeroSection,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    title: {
+      control: {
+        type: "text",
+      },
+    },
+  },
   decorators: [withRouter],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Breadcrumb>;
+type Story = StoryObj<typeof HeroSection>;
 
 export const Example: Story = {
   args: {
-    items: [
+    title: "Page Title",
+    breadcrumb: [
       {
         name: "Home",
         link: "/",

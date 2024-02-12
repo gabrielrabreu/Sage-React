@@ -1,41 +1,41 @@
+import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { composeStory } from "@storybook/react";
 
-import meta, { Default, Disabled } from "./Button.stories";
+import Button from "./Button";
 
-const ButtonDefault = composeStory(Default, meta);
-const ButtonDisabled = composeStory(Disabled, meta);
-
-describe("Button component", () => {
-  test("renders button with label correctly", () => {
-    const { getByTestId } = render(ButtonDefault());
-
-    const button = getByTestId("button");
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveTextContent("Default");
+describe("Button", () => {
+  it("renders correctly with text content", () => {
+    const textContent = "Click me";
+    const { getByTestId } = render(
+      <Button text={textContent} testId="button" />
+    );
+    const buttonElement = getByTestId("button");
+    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toHaveTextContent(textContent);
   });
 
-  test("calls onClick callback when button is clicked", () => {
-    const onClickMock = jest.fn();
-
-    const { getByTestId } = render(ButtonDefault({ onClick: onClickMock }));
-
-    const button = getByTestId("button");
-    fireEvent.click(button);
-    expect(onClickMock).toHaveBeenCalledTimes(1);
+  it("executes onClick function when clicked", () => {
+    const handleClick = jest.fn();
+    const { getByTestId } = render(
+      <Button text="Click me" onClick={handleClick} testId="button" />
+    );
+    const buttonElement = getByTestId("button");
+    fireEvent.click(buttonElement);
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  test("disables button when disabled prop is true", () => {
-    const { getByTestId } = render(ButtonDisabled());
-
-    const button = getByTestId("button");
-    expect(button).toBeDisabled();
+  it("applies the default class name 'button'", () => {
+    const { getByTestId } = render(<Button text="Click me" testId="button" />);
+    const footerElement = getByTestId("button");
+    expect(footerElement).toHaveClass("button");
   });
 
-  test("button is enabled by default", () => {
-    const { getByTestId } = render(ButtonDefault());
-
-    const button = getByTestId("button");
-    expect(button).toBeEnabled();
+  it("applies the provided class name", () => {
+    const customClassName = "custom-button";
+    const { getByTestId } = render(
+      <Button text="Click me" testId="button" className={customClassName} />
+    );
+    const footerElement = getByTestId("button");
+    expect(footerElement).toHaveClass(customClassName);
   });
 });

@@ -1,13 +1,13 @@
 @import "../../styles/variables";
 
-.button {
+.iconButton {
+  display: flex;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: $gray-700;
-  border-radius: 0.25rem;
+  border-radius: 50%;
   transition: all 0.3s ease;
 
   &:hover {
@@ -25,4 +25,12 @@
   &:focus-visible {
     box-shadow: 0 0 0 3px $gray-400;
   }
+
+  svg {
+    color: $gray-700;
+  }
+}
+
+.iconButtonStorybook {
+  background-color: blue;
 }
