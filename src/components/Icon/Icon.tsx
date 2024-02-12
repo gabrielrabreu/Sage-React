@@ -1,12 +1,15 @@
 import React from "react";
+import classNames from "classnames";
 import { icons as LucideIcons } from "lucide-react";
+
+import { WithClassName, WithTestId } from "../../interfaces";
 
 import styles from "./Icon.module.scss";
 
 /**
  * Props for the Icon component.
  */
-interface IconProps {
+interface IconProps extends WithClassName, WithTestId {
   /**
    * Name of the Lucide icon to be rendered.
    */
@@ -18,9 +21,14 @@ interface IconProps {
  * @param {IconProps} props - Component props.
  * @returns {React.ReactElement} - A JSX element representing the Lucide icon.
  */
-const Icon: React.FC<IconProps> = ({ name }) => {
+const Icon: React.FC<IconProps> = ({ name, className, testId }) => {
   const LucideIcon = LucideIcons[name];
-  return <LucideIcon className={styles.icon} data-testid={`icon-${name}`} />;
+  return (
+    <LucideIcon
+      className={classNames(styles.icon, className)}
+      data-testid={testId}
+    />
+  );
 };
 
 export default Icon;

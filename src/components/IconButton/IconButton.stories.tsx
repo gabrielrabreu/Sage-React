@@ -4,6 +4,8 @@ import { Meta, StoryObj } from "@storybook/react";
 import IconButton from "./IconButton";
 import Icon from "../Icon/Icon";
 
+import styles from "./IconButton.module.scss";
+
 const meta: Meta<typeof IconButton> = {
   title: "Sage/IconButton",
   component: IconButton,

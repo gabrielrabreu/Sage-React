@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+
+.header {
+  display: flex;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 997;
+  align-items: center;
+  padding-left: 25px;
+  box-shadow: 0px 2px 20px $gray-300;
+}
+
+.headerNav {
+  margin-left: auto;
+
+  ul {
+    display: flex;
+  }
+}
+
+.headerNavItem {
+  margin-right: 1rem;
+}

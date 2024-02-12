@@ -1,6 +1,8 @@
 import React from "react";
 import classnames from "classnames";
 
+import { WithChildren, WithClassName, WithTestId } from "../../interfaces";
+
 import styles from "./Typography.module.scss";
 
 export type TypographyVariant =
@@ -18,15 +20,11 @@ export type TypographyVariant =
 /**
  * Props for the Typography component.
  */
-interface TypographyProps {
+interface TypographyProps extends WithChildren, WithClassName, WithTestId {
   /**
    * The variant of the typography.
    */
   variant: TypographyVariant;
-  /**
-   * The content to be displayed.
-   */
-  children: React.ReactNode;
 }
 
 /**
@@ -34,10 +32,17 @@ interface TypographyProps {
  * @param {TypographyProps} props - Component props.
  * @returns {React.ReactElement} - A JSX element representing the typography.
  */
-const Typography: React.FC<TypographyProps> = ({ variant, children }) => {
-  const typographyClass = classnames(styles.typography, styles[variant]);
+const Typography: React.FC<TypographyProps> = ({
+  variant,
+  children,
+  className,
+  testId,
+}) => {
   return (
-    <p className={typographyClass} data-testid="typography">
+    <p
+      className={classnames(styles.typography, styles[variant], className)}
+      data-testid={testId}
+    >
       {children}
     </p>
   );

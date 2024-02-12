@@ -1,6 +1,6 @@
 {
   "name": "@gabrielrabreu/sage-react",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
@@ -52,7 +52,6 @@
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
     "storybook": "^7.6.13",
-    "storybook-addon-react-router-v6": "^2.0.10",
     "style-loader": "^3.3.4",
     "tailwindcss": "^3.4.1",
     "tslib": "^2.6.2",

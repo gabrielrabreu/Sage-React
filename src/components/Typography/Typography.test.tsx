@@ -21,12 +21,39 @@ describe("Typography", () => {
     it(`renders correctly with '${variant}' variant`, () => {
       const textContent = variant.charAt(0).toUpperCase() + variant.slice(1);
       const { getByTestId } = render(
-        <Typography variant={variant}>{textContent}</Typography>
+        <Typography variant={variant} testId="typography">
+          {textContent}
+        </Typography>
       );
       const typographyElement = getByTestId("typography");
       expect(typographyElement).toHaveClass("typography");
       expect(typographyElement).toHaveClass(variant);
       expect(typographyElement).toHaveTextContent(textContent);
     });
+  });
+
+  it("applies the default class name 'typography'", () => {
+    const { getByTestId } = render(
+      <Typography variant="body" testId="typography">
+        Text
+      </Typography>
+    );
+    const typographyElement = getByTestId("typography");
+    expect(typographyElement).toHaveClass("typography");
+  });
+
+  it("applies the provided class name", () => {
+    const customClassName = "custom-icon";
+    const { getByTestId } = render(
+      <Typography
+        variant="body"
+        testId="typography"
+        className={customClassName}
+      >
+        Text
+      </Typography>
+    );
+    const typographyElement = getByTestId("typography");
+    expect(typographyElement).toHaveClass(customClassName);
   });
 });
