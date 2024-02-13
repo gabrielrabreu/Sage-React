@@ -15,8 +15,6 @@
 }
 
 .gridItem {
-  padding: 0.5rem;
-
   @for $i from 1 through 12 {
     &.cols-#{$i} {
       grid-column: span #{$i};

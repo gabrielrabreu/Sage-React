@@ -14,6 +14,10 @@ interface ButtonProps extends WithClassName, WithTestId {
    */
   text: string;
   /**
+   * The type of the button. Default is "button".
+   */
+  type?: "button" | "submit" | "reset";
+  /**
    * Function to be called when the button is clicked.
    */
   onClick?: () => void;
@@ -26,12 +30,14 @@ interface ButtonProps extends WithClassName, WithTestId {
  */
 const Button: React.FC<ButtonProps> = ({
   text,
+  type = "button",
   onClick,
   className,
   testId,
 }) => {
   return (
     <button
+      type={type}
       className={classNames(styles.button, className)}
       onClick={onClick}
       data-testid={testId}
