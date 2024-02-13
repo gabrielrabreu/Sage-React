@@ -43,7 +43,7 @@ describe("Typography", () => {
   });
 
   it("applies the provided class name", () => {
-    const customClassName = "custom-icon";
+    const customClassName = "custom-typography";
     const { getByTestId } = render(
       <Typography
         variant="body"

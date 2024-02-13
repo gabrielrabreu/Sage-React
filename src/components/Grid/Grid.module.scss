@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
+
+  @for $i from 1 through 12 {
+    &.cols-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    &.rows-#{$i} {
+      grid-template-rows: repeat(#{$i}, 1fr);
+    }
+  }
+}
+
+.gridItem {
+  padding: 0.5rem;
+
+  @for $i from 1 through 12 {
+    &.cols-#{$i} {
+      grid-column: span #{$i};
+    }
+
+    &.rows-#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+}
