@@ -1,5 +1,4 @@
 import { StorybookConfig } from "@storybook/react-webpack5";
-import { parameters } from "./../storybook-static/sb-preview/runtime";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
