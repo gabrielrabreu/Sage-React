@@ -1,4 +1,6 @@
 export { default as DatePicker } from "./components/form/DatePicker/DatePicker";
+export { default as FormField } from "./components/form/FormField/FormField";
+export { default as Input } from "./components/form/Input/Input";
 export { default as InputNumber } from "./components/form/InputNumber/InputNumber";
 export { default as InputText } from "./components/form/InputText/InputText";
 
