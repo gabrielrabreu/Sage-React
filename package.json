@@ -1,7 +1,7 @@
 {
   "name": "@gabrielrabreu/sage-react",
-  "version": "0.0.8-beta.4",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Sage React",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
@@ -58,7 +58,6 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "lucide-react": "^0.323.0",
     "react": "^18.2.0",
     "react-router-dom": "^6.22.0"
   },
@@ -70,5 +69,8 @@
   "types": "dist/index.d.ts",
   "publishConfig": {
     "@gabrielrabreu:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "react-hook-form": "^7.50.1"
   }
 }

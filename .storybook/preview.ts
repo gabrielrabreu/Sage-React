@@ -1,16 +1,18 @@
 import { Preview, ReactRenderer } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-themes";
 
-import "../src/styles/global.scss";
+import "../src/styles/main.scss";
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
+    layout: "centered",
+  },
+  argTypes: {
+    className: {
+      control: "text",
+    },
+    testId: {
+      control: "text",
     },
   },
   decorators: [
