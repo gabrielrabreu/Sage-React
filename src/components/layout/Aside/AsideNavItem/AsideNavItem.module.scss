@@ -1,0 +1,33 @@
+@import "../../../../styles/variables";
+
+.asideNavItem {
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: $gray-700;
+
+    svg {
+      width: 1rem;
+      margin-right: 0.5rem;
+      color: $gray-700;
+    }
+  }
+
+  .asideNavItemActive {
+    background-color: $gray-300;
+  }
+
+  &:hover {
+    background-color: $gray-200;
+  }
+
+  &:active {
+    background-color: $gray-300;
+  }
+}

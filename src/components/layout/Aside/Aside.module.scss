@@ -1,0 +1,13 @@
+@import "../../../styles/variables";
+
+.aside {
+  position: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 996;
+  box-shadow: 10px 0 10px -10px $gray-300;
+  transition: left 0.3s ease;
+}

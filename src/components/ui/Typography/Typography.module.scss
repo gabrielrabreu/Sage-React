@@ -1,0 +1,58 @@
+.typography {
+  margin: 0;
+  padding: 0;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.link {
+  font-size: 1rem;
+  color: blue;
+  text-decoration: underline;
+}
+
+.meta {
+  font-size: 0.675rem;
+  color: #666;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: red;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.highlight {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.caption {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.body {
+  font-size: 1rem;
+  color: #333;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: #666;
+}
