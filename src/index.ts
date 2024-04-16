@@ -16,3 +16,5 @@ export { default as Button } from "./components/ui/Button/Button";
 export { default as Icon } from "./components/ui/Icon/Icon";
 export { default as IconButton } from "./components/ui/IconButton/IconButton";
 export { default as Typography } from "./components/ui/Typography/Typography";
+
+export * from "./interfaces";
